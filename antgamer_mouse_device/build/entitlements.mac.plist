@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- 1. Electron 运行必需的基础权限 -->
+    <key>com.apple.security.cs.allow-jit</key>
+    <true/>
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+    <true/>
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+    
+    <!-- 2. 硬件设备访问权限 -->
+    <!-- 允许访问 USB 设备 (关键！针对你的 Silicon Labs 设备) -->
+    <key>com.apple.security.device.usb</key>
+    <true/>
+    
+    <!-- 如果使用的是 WebHID API，通常也需要这个 -->
+    <key>com.apple.security.device.hid</key>
+    <true/>
+
+    <!-- 其他常用硬件权限 (按需开启) -->
+    <key>com.apple.security.device.camera</key>
+    <true/>
+    <key>com.apple.security.device.microphone</key>
+    <true/>
+    <key>com.apple.security.device.bluetooth</key>
+    <true/>
+
+    <!-- 3. 网络与文件权限 (如需沙盒) -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <key>com.apple.security.files.user-selected.read-write</key>
+    <true/>
+  </dict>
+</plist>
