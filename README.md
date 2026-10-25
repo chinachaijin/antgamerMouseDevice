@@ -1,1 +1,3 @@
 这是蚂蚁电竞鼠标驱动的完整离线版，只需要把device放到本地web服务里就可以直接使用。
+antgamer_mouse_device文件是我创建的一个electron项目，只要运行npm run package就可以打包出当前平台可用的离线驱动
+electron项目目前存在无法手动选择HID的BUG（弹出新窗选择会让主界面获取HID设备的接口回调异常），现在点击连接后默认优先选择USB有线连接，然后是2.4G接收器，没有弹窗选择。
